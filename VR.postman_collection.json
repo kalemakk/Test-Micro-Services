@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "d195d4d1-30b4-4363-872f-dcbb6851cfbd",
+		"name": "VR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hotel-service",
+			"item": [
+				{
+					"name": "hotel",
+					"item": [
+						{
+							"name": "View hotels",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Hotel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "file",
+									"file": {},
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View Hotel by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update hotel",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"location\":\"Nyabugog\",\r\n    \"price\":\"200000\",\r\n    \"telephoneNumber\":\"0787946565\",\r\n    \"email\":\"labelleterrace@gmail.com\",\r\n    \"website\":\"www.labelleterrace.com\",\r\n    \"managerName\":\"Munyangabe Jean\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve hotel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels/approve/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels",
+										"approve",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Hotel",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotels/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotels",
+										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Attachments",
+					"item": [
+						{
+							"name": "View all attachments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/attachments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"attachments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "view Attachment by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/attachments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"attachments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Attachment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/a241900/Desktop/VR.txt"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/attachments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"attachments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download Attachment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/attachments/download?file=VR.txt",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"attachments",
+										"download"
+									],
+									"query": [
+										{
+											"key": "file",
+											"value": "VR.txt"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "View comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotel-comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotel-comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\":\"Nice services\",\r\n    \"commentedBy\":\"Alex\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotel-comments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotel-comments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View Comment By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotel-comments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotel-comments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update comment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\":\"Bad Service\",\r\n    \"commentedBy\":\"Arnold kk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotel-comments/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotel-comments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/hotel-comments/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"hotel-comments",
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "tourist-service",
+			"item": [
+				{
+					"name": "Get all tourists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/v1/tourists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"v1",
+								"tourists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tourist by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/v1/tourists/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"v1",
+								"tourists",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a tourist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Kwitonda\",\r\n    \"lastName\":\"John\",\r\n    \"country\":\"Kenya\",\r\n    \"email\":\"alexnewzniyo@gmail.com\",\r\n    \"telephone\":\"0787946565\",\r\n    \"updatedBy\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/v1/tourists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"v1",
+								"tourists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a tourist",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/v1/tourists/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"v1",
+								"tourists",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a tourist",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Niyo\",\r\n    \"lastName\":\"Nsaba\",\r\n    \"country\":\"Kenya\",\r\n    \"email\":\"alexnewzniyo@gmail.com\",\r\n    \"telephone\":\"0787946565\",\r\n    \"updatedBy\":\"Kwitegetse\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/v1/tourists/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"v1",
+								"tourists",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1 @@
+Add cordinate(long and lat) to hotel
